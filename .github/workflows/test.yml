@@ -1,0 +1,17 @@
+name: Test candidate
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm test
+      - name: Native HTTPS without external network
+        run: docker run --rm --network none --add-host api.mailchannels.net:127.0.0.1 -v "$PWD:/app:ro" -w /app node:22-bookworm sh native/run.sh

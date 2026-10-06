@@ -1,0 +1,6 @@
+{
+  "name": "mailchannels-auth0-action-validation",
+  "private": true,
+  "scripts": {"test": "node --test"},
+  "devDependencies": {"undici": "7.30.0"}
+}
