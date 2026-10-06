@@ -47,11 +47,11 @@ npm ci --ignore-scripts
 npm test
 ```
 
-The26tests execute the exact source in a VM using actual Undici fetch with a
+The 26 tests execute the exact source in a VM using actual Undici fetch with a
 network-disabled MockAgent. They cover mapping, validation, redaction, statuses,
-redirect refusal and a real10second timeout.
+redirect refusal and a real 10-second timeout.
 
-For13additional realHTTPS checks, from this repository root:
+For 13 additional real HTTPS checks, from this repository root:
 
 ```sh
 docker run --rm --network none --add-host api.mailchannels.net:127.0.0.1 \
@@ -59,7 +59,7 @@ docker run --rm --network none --add-host api.mailchannels.net:127.0.0.1 \
 ```
 
 This uses the unchanged Action and Node's global fetch with a temporary test CA
-and loopback server. It checks trusted202, wrong-host/untrusted certificates,
+and loopback server. It checks trusted HTTP 202, wrong-host/untrusted certificates,
 redirects, HTTP errors, disconnect and timeout without replay. No external network
 is available. Temporary fixture keys are deleted; TLS verification stays enabled.
 These tests do not establish hosted Auth0 compatibility or live delivery.
@@ -85,4 +85,4 @@ authentication links, tokens or personal message contents in issues.
 - [Notification drop/retry](https://auth0.com/docs/actions/reference/custom-email-provider/custom-email-provider-api-object)
 - [Partner Actions](https://auth0.com/docs/customize/integrations/marketplace-partners/actions-integrations-for-partners)
 
-MIT License. Copyright2026MailChannels Corporation.
+MIT License. Copyright 2026 MailChannels Corporation.
