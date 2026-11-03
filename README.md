@@ -25,6 +25,12 @@ The provider has no dry-run mode: reporting a dry-run as successful within a rea
 password-reset flow would suppress delivery. Perform API dry-runs separately from
 Auth0 flows. See the [Email API quickstart](https://docs.mailchannels.com/email-api).
 
+## Support
+
+This project is supported by the MailChannels team on a best-effort basis. The best way to get support is to file an issue on GitHub: https://github.com/mailchannels/mailchannels-auth0-email-provider/issues
+
+If you are a MailChannels customer and have a problem with the operation of the MailChannels service, you can get support at https://support.mailchannels.com/
+
 ## Failures and delivery semantics
 
 Requests use the fixed HTTPS `/tx/v1/send` endpoint with redirects refused and a
